@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<definitions name="HelloWorld" targetNamespace="urn:HelloWorld" xmlns:tns="urn:HelloWorld"  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Convert">
+      <xsd:element name="getNumber" type="xsd:int" />
+			<xsd:element name="getValuta" type="xsd:string" />
+			<xsd:element name="ConvertReponse" type="xsd:int" />	 	  
+		</xsd:schema>			
+  </types>
+  
+  <message name="pretvori">
+		<part name="valuta" type="tns:getValuta" />
+    <part name="kolicina" type="tns:getNumber" />
+  </message>
+  
+  <message name="doConvertResponse">
+    <part name="return" type="tns:ConvertReponse" />
+  </message>  
+  
+  <portType name="ConvertPort">
+    <operation name="pretvori">
+	  <input message="tns:pretvori" />
+	  <output message="tns:doConvertResponse" />
+	</operation>
+  </portType>
+  
+  <binding name="ConvertBinding" type="tns:ConvertPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="pretvori">
+	    <soap:operation soapAction="urn:ConvertAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:Convert" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+
+		<output>
+		  <soap:body use="encoded" namespace="urn:Convert" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>
+  
+  <service name="ConvertService">
+    <port name="ConvertPort" binding="tns:ConvertBinding">
+	  <soap:address location="http://localhost/dz3/server.php" />
+	</port>
+  </service>
+    
+</definitions>
