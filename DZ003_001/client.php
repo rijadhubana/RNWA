@@ -16,7 +16,7 @@ try{
 	ini_set('soap.wsdl_cache_enabled',0);
 	ini_set('soap.wsdl_cache_ttl',0);
 	
-	$endPointWSDL = "http://localhost/dz3/pretvori.wsdl";
+	$endPointWSDL = "http://localhost/DZ003_001/pretvori.wsdl";
   
 	$sClient = new SoapClient($endPointWSDL,
 							array(
