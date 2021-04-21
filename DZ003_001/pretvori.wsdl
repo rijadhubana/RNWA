@@ -40,7 +40,7 @@
   
   <service name="ConvertService">
     <port name="ConvertPort" binding="tns:ConvertBinding">
-	  <soap:address location="http://localhost/dz3/server.php" />
+	  <soap:address location="http://localhost/DZ003_001/server.php" />
 	</port>
   </service>
     
