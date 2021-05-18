@@ -1,0 +1,84 @@
+WSDLLESS HTTP REQUEST
+
+GET /DZ003_003/server.php?bandName=Kool%20And%20The%20Gang HTTP/1.1
+Host: localhost
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"
+sec-ch-ua-mobile: ?1
+User-Agent: Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Mobile Safari/537.36
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost/DZ003_003/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,bs;q=0.8,hr;q=0.7
+
+WSDLLESS HTTP RESPONSE
+
+HTTP/1.1 200 OK
+Date: Tue, 18 May 2021 13:44:18 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+X-Powered-By: PHP/8.0.3
+Content-Length: 613
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<table id="novaTabela">
+			<thead>
+			  <th>Nazivi članova benda</th>
+			</thead> <tbody>
+			  <tr>
+			    <td data-label='artisteName'>Robert Bell</td>
+			 </tr>
+		       </tbody> <tbody>
+			  <tr>
+			    <td data-label='artisteName'>Ronald Bell</td>
+			 </tr>
+		       </tbody> <tbody>
+			  <tr>
+			    <td data-label='artisteName'>George Brown</td>
+			 </tr>
+		       </tbody> <tbody>
+			  <tr>
+			    <td data-label='artisteName'>Lavell Evans</td>
+			 </tr>
+		       </tbody> <tbody>
+			  <tr>
+			    <td data-label='artisteName'>Amir Bayyan</td>
+			 </tr>
+		       </tbody></table>	
+
+WSDL/ASMX HTTP REQUEST:
+
+GET /DZ003_003/personSearch.php?s=Morgan HTTP/1.1
+Host: localhost
+Connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"
+sec-ch-ua-mobile: ?1
+User-Agent: Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Mobile Safari/537.36
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost/DZ003_003/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,bs;q=0.8,hr;q=0.7
+
+
+WSDL/ASMX HTTP RESPONSE:
+
+HTTP/1.1 200 OK
+Date: Tue, 18 May 2021 13:46:29 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+X-Powered-By: PHP/8.0.3
+Content-Length: 290
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<table id="novaTabela"><thead>
+			<th>Ime</th> <th>Prezime</th> <th>Nacionalnost</th>
+			<th>Link slike</th></thead>
+			<tbody><tr> <td> Morgan</td><td> Freeman</td><td> American</td><td> http://www.imdb.com/name/nm0000151/mediaviewer/rm3587479040?ref_=nm_ov_ph</td></tr></tbody></table>
