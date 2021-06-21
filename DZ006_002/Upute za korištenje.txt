@@ -1,0 +1,9 @@
+Za SequelMovieMVC rar file je urađen sistem sesija. Da bi provjerili kako radi funkcionalnost, potrebno je pokrenuti web aplikaciju i kliknuti na login dugme (u gornjem desnom uglu). U login formi je potrebno unijeti jedan od mogućih kredencijala (lijevo username, desno password):
+admin - admin
+user - user
+rijadh - rijadh
+talos - talos
+alex - alex
+Verifikacija kredencijala se dešava u odnosu na Helper.LoginKredencijali.json file u kojem su passwordi hashirani sa MD5 hashom. Ukoliko je korisnik pronađen, preusmjeren je na odgovarajući view na kojem se nalazi njegov ID, username i random string koji mu je dodijeljen.
+
+Za SequelMovieMVC - OAuth rar file je urađena OAuth AA. Da bi se provjerio rad, potrebno je kliknuti na bilo koje dugme na Index.htmlu (Song, Soundtrack, SoundtrackSong, Login), te će se korisnik preusmjeriti na googleovu autentifikacijsku stranicu gdje će morati unijeti svoje google kredencijale. Nakon uspješne autentifikacije, korisnik je preusmjeren na View u kojem se mogu vidjeti claimsi koji su dobiveni od strane Google-a, što znači da je autentifikacija uspješna.
